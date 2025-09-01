@@ -25,7 +25,7 @@ const UpdatePassword = () => {
         e.preventDefault();
 
         if (newPassword.length < 8) {
-            enqueueSnackbar("Password length must be atleast 8 characters", { variant: "warning" });
+            enqueueSnackbar("Mật khẩu phải ít nhất 8 ký tự", { variant: "warning" });
             return;
         }
         if (newPassword !== confirmPassword) {
@@ -57,7 +57,7 @@ const UpdatePassword = () => {
 
     return (
         <>
-            <MetaData title="Password Update | Flipkart" />
+            <MetaData title="Cập nhật mật khẩu | Flipkart" />
 
             {loading && <BackdropLoader />}
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">
@@ -66,14 +66,14 @@ const UpdatePassword = () => {
                 <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
 
                     <FormSidebar
-                        title="Looks like you want to update password!"
-                        tag="Enter your current and new password to update"
+                        title="Có vẻ như bạn muốn cập nhật mật khẩu!"
+                        tag=""
                     />
 
                     {/* <!-- signup column --> */}
                     <div className="flex-1 overflow-hidden">
 
-                        <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Update Password</h2>
+                        <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Cập nhật mật khẩu</h2>
                         {/* <!-- personal info procedure container --> */}
                         <form
                             onSubmit={updatePasswordSubmitHandler}
@@ -86,7 +86,7 @@ const UpdatePassword = () => {
 
                                     <TextField
                                         fullWidth
-                                        label="Current Password"
+                                        label="mật khẩu hiện tại"
                                         type="password"
                                         name="oldPassword"
                                         value={oldPassword}
@@ -95,7 +95,7 @@ const UpdatePassword = () => {
                                     />
                                     <TextField
                                         fullWidth
-                                        label="New Password"
+                                        label="Mật khẩu mới"
                                         type="password"
                                         name="newPassword"
                                         value={newPassword}
@@ -104,7 +104,7 @@ const UpdatePassword = () => {
                                     />
                                     <TextField
                                         fullWidth
-                                        label="Confirm New Password"
+                                        label="Nhập lại mật khẩu mới"
                                         type="password"
                                         name="confirmPassword"
                                         value={confirmPassword}
@@ -114,8 +114,8 @@ const UpdatePassword = () => {
 
                                 </div>
                                 {/* <!-- input container column --> */}
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Update</button>
-                                <Link className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium mb-8" to="/account">Cancel</Link>
+                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Cập nhật mật khẩu</button>
+                                <Link className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium mb-8" to="/account">Hủy</Link>
                             </div>
 
                         </form>

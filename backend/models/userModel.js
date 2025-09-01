@@ -7,21 +7,21 @@ const crypto = require('crypto');
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Please Enter Your Name"],
+        required: [true, "Vui lòng nhập tên"],
     },
     email: {
         type: String,
-        required: [true, "Please Enter Your Email"],
+        required: [true, "Vui lòng nhập Email"],
         unique: true,
     },
     gender: {
         type: String,
-        required: [true, "Please Enter Gender"]
+        required: [true, "Vui lòng nhập giới tính"]
     },
     password: {
         type: String,
-        required: [true, "Please Enter Your Password"],
-        minLength: [8, "Password should have atleast 8 chars"],
+        required: [true, "Vui lòng nhập mật khẩu"],
+        minLength: [8, "Mật khẩu phải từ 8 ký tự"],
         select: false,
     },
     avatar: {

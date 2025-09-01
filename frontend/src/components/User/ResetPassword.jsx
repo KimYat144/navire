@@ -24,7 +24,7 @@ const ResetPassword = () => {
     e.preventDefault();
 
     if (newPassword.length < 8) {
-      enqueueSnackbar("Password length must be atleast 8 characters", { variant: "warning" });
+      enqueueSnackbar("Mật khẩu phải ít nhất 8 ký tự", { variant: "warning" });
       return;
     }
     if (newPassword !== confirmPassword) {
@@ -66,7 +66,7 @@ const ResetPassword = () => {
 
           {/* <!-- login column --> */}
           <div class="flex-1 overflow-hidden">
-            <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Reset Password</h2>
+            <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Quên mật khẩu</h2>
 
             {/* <!-- edit info container --> */}
             <div class="text-center py-10 px-4 sm:px-14">

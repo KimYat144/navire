@@ -2,7 +2,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Searchbar from './Searchbar';
-import logo from '../../../assets/images/logo.png';
+import logo from '../../../assets/images/images.png';
 import PrimaryDropDownMenu from './PrimaryDropDownMenu';
 import SecondaryDropDownMenu from './SecondaryDropDownMenu';
 import { useState } from 'react';
@@ -19,27 +19,22 @@ const Header = () => {
   const [toggleSecondaryDropDown, setToggleSecondaryDropDown] = useState(false);
 
   return (
-
-    <header className="bg-primary-blue fixed top-0 py-2.5 w-full z-10">
-
+    <header className="bg-[#87CEFA] fixed top-0 py-2.5 w-full z-10">
       {/* <!-- navbar container --> */}
       <div className="w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative">
-
         {/* <!-- logo & search container --> */}
         <div className="flex items-center flex-1">
           <Link className="h-7 mr-1 sm:mr-4" to="/">
-            <img draggable="false" className="h-full w-full object-contain" src={logo} alt="Flipkart Logo" />
+            <img draggable="false" className="h-[40px] items-center m-0 object-contain" src={logo} alt="Flipkart Logo" />
           </Link>
-
           <Searchbar />
         </div>
         {/* <!-- logo & search container --> */}
-
         {/* <!-- right navs --> */}
         <div className="flex items-center justify-between ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative">
 
           {isAuthenticated === false ?
-            <Link to="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Login</Link>
+            <Link to="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Đăng nhập</Link>
             :
             (
               <span className="userDropDown flex items-center text-white font-medium gap-1 cursor-pointer" onClick={() => setTogglePrimaryDropDown(!togglePrimaryDropDown)}>{user.name && user.name.split(" ", 1)}
@@ -50,9 +45,9 @@ const Header = () => {
 
           {togglePrimaryDropDown && <PrimaryDropDownMenu setTogglePrimaryDropDown={setTogglePrimaryDropDown} user={user} />}
 
-          <span className="moreDropDown hidden sm:flex items-center text-white font-medium gap-1 cursor-pointer" onClick={() => setToggleSecondaryDropDown(!toggleSecondaryDropDown)}>More
+          {/* <span className="moreDropDown hidden sm:flex items-center text-white font-medium gap-1 cursor-pointer" onClick={() => setToggleSecondaryDropDown(!toggleSecondaryDropDown)}>  
             <span>{toggleSecondaryDropDown ? <ExpandLessIcon sx={{ fontSize: "16px" }} /> : <ExpandMoreIcon sx={{ fontSize: "16px" }} />}</span>
-          </span>
+          </span> */}
 
           {toggleSecondaryDropDown && <SecondaryDropDownMenu />}
 
@@ -63,15 +58,13 @@ const Header = () => {
                 {cartItems.length}
               </div>
             }
-            Cart
+            Giỏ hàng
           </Link>
         </div>
         {/* <!-- right navs --> */}
-
       </div>
       {/* <!-- navbar container --> */}
     </header>
   )
 };
-
 export default Header;

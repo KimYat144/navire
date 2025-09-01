@@ -33,7 +33,7 @@ const Shipping = () => {
         e.preventDefault();
 
         if (phoneNo.length < 10 || phoneNo.length > 10) {
-            enqueueSnackbar("Invalid Phone Number", { variant: "error" });
+            enqueueSnackbar("Số điện thoại không hợp lệ", { variant: "error" });
             return;
         }
         dispatch(saveShippingInfo({ address, city, country, state, pincode, phoneNo }));
@@ -60,7 +60,7 @@ const Shipping = () => {
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
                                         fullWidth
-                                        label="Address"
+                                        label="Địa chỉ"
                                         variant="outlined"
                                         required
                                     />
@@ -70,7 +70,7 @@ const Shipping = () => {
                                             value={pincode}
                                             onChange={(e) => setPincode(e.target.value)}
                                             type="number"
-                                            label="Pincode"
+                                            label="Mã vùng"
                                             fullWidth
                                             variant="outlined"
                                             required
@@ -79,7 +79,7 @@ const Shipping = () => {
                                             value={phoneNo}
                                             onChange={(e) => setPhoneNo(e.target.value)}
                                             type="number"
-                                            label="Phone No"
+                                            label="Số điện thoại"
                                             fullWidth
                                             variant="outlined"
                                             required
@@ -90,13 +90,13 @@ const Shipping = () => {
                                         <TextField
                                             value={city}
                                             onChange={(e) => setCity(e.target.value)}
-                                            label="City"
+                                            label="Thành phố"
                                             fullWidth
                                             variant="outlined"
                                             required
                                         />
                                         <TextField
-                                            label="Landmark (Optional)"
+                                            label="Địa chỉ cụ thể"
                                             fullWidth
                                             variant="outlined"
                                         />
@@ -105,38 +105,38 @@ const Shipping = () => {
                                     <div className="flex gap-6">
 
                                         <FormControl fullWidth>
-                                            <InputLabel id="country-select">Country</InputLabel>
+                                            <InputLabel id="country-select">Quốc gia</InputLabel>
                                             <Select
                                                 labelId="country-select"
                                                 id="country-select"
                                                 defaultValue={country}
                                                 disabled
-                                                label="Country"
+                                                label="Quốc gia"
                                                 // onChange={(e) => setCountry(e.target.value)}
                                             >
-                                                <MenuItem value={'IN'}>India</MenuItem>
+                                                <MenuItem value={'IN'}>Việt Nam</MenuItem>
                                             </Select>
                                         </FormControl>
 
                                         <FormControl fullWidth disabled={country ? false : true}>
-                                            <InputLabel id="state-select">State</InputLabel>
-                                            <Select
+                                            {/* <InputLabel id="state-select">Quốc tịch</InputLabel> */}
+                                            {/* <Select
                                                 labelId="state-select"
                                                 id="state-select"
                                                 value={state}
-                                                label="State"
+                                                label="Quốc tịch"
                                                 onChange={(e) => setState(e.target.value)}
                                                 required
                                             >
                                                 {states.map((item) => (
                                                     <MenuItem key={item.code} value={item.code}>{item.name}</MenuItem>
                                                 ))}
-                                            </Select>
+                                            </Select> */}
                                         </FormControl>
 
                                     </div>
 
-                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">save and deliver here</button>
+                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">LƯU VÀ Tiếp tục đặt HÀNG</button>
                                 </form>
                             </div>
                         </Stepper>

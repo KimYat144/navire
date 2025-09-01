@@ -31,46 +31,29 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
     }
 
     const navs = [
+
         {
-            title: "Supercoin Zone",
-            icon: <OfflineBoltIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
-        {
-            title: "Flipkart Plus Zone",
-            icon: <AddCircleIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
-        {
-            title: "Orders",
+            title: "Đặt hàng",
             icon: <ShoppingBagIcon sx={{ fontSize: "18px" }} />,
             redirect: "/orders",
         },
-        {
-            title: "Wishlist",
-            icon: <FavoriteIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/wishlist",
-        },
-        {
-            title: "My Chats",
-            icon: <ChatIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
-        {
-            title: "Coupons",
-            icon: <ConfirmationNumberIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
-        {
-            title: "Gift Cards",
-            icon: <AccountBalanceWalletIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
-        {
-            title: "Notifications",
-            icon: <NotificationsIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
-        },
+       
+        // {
+        //     title: "Trò chuyện",
+        //     icon: <ChatIcon sx={{ fontSize: "18px" }} />,
+        //     redirect: "/",
+        // },
+       
+        // {
+        //     title: "Phiếu giảm giá",
+        //     icon: <AccountBalanceWalletIcon sx={{ fontSize: "18px" }} />,
+        //     redirect: "/",
+        // },
+        // {
+        //     title: "Thông báo",
+        //     icon: <NotificationsIcon sx={{ fontSize: "18px" }} />,
+        //     redirect: "/",
+        // },
     ]
 
     return (
@@ -85,7 +68,7 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
 
             <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" to="/account">
                 <span className="text-primary-blue"><AccountCircleIcon sx={{ fontSize: "18px" }} /></span>
-                My Profile
+                Thông tin của tôi
             </Link>
 
             {navs.map((item, i) => {

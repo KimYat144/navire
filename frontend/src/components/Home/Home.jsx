@@ -9,10 +9,8 @@ import { useSnackbar } from 'notistack';
 import MetaData from '../Layouts/MetaData';
 
 const Home = () => {
-
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
-
   const { error, loading } = useSelector((state) => state.products);
 
   useEffect(() => {
@@ -25,19 +23,18 @@ const Home = () => {
 
   return (
     <>
-      <MetaData title="Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!" />
+      <MetaData title="Shop Trang Sức Cao Cấp" />
       <Categories />
       <main className="flex flex-col gap-3 px-2 mt-16 sm:mt-2">
         <Banner />
-        <DealSlider title={"Discounts for You"} />
-        {!loading && <ProductSlider title={"Suggested for You"} tagline={"Based on Your Activity"} />}
-        <DealSlider title={"Top Brands, Best Price"} />
-        {!loading && <ProductSlider title={"You May Also Like..."} tagline={"Based on Your Interest"} />}
-        <DealSlider title={"Top Offers On"} />
-        {!loading && <ProductSlider title={"Don't Miss These!"} tagline={"Inspired by your order"} />}
+        <DealSlider title={"DEAL HOT CUỐI TUẦN"} />
+        {/* {!loading && <ProductSlider title={"Suggested for You"} tagline={"Based on Your Activity"} />} */}
+        <DealSlider title={"Top Sản Phẩm Bán Chạy"} />
+        {!loading && <ProductSlider title={"Sản phẩm được ưu thích"} tagline={"Dựa trên sở thích của bạn"} />}
+        <DealSlider title={"Ưu đãi hàng đầu"} />
+        {!loading && <ProductSlider title={"Thông tin khuyến mãi"} tagline={"Tích điểm quà Vip"} />}
       </main>
     </>
   );
 };
-
 export default Home;

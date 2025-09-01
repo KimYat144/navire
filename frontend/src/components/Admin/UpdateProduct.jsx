@@ -11,7 +11,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import BackdropLoader from '../Layouts/BackdropLoader';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
-
+import AdminContainer from './AdminContainer';
 const UpdateProduct = () => {
 
     const dispatch = useDispatch();
@@ -182,7 +182,7 @@ const UpdateProduct = () => {
     }, [dispatch, error, updateError, isUpdated, productId, product, navigate, enqueueSnackbar]);
 
     return (
-        <>
+        <AdminContainer>
             <MetaData title="Admin: Update Product | Flipkart" />
 
             {loading && <BackdropLoader />}
@@ -191,7 +191,7 @@ const UpdateProduct = () => {
 
                 <div className="flex flex-col gap-3 m-2 sm:w-1/2">
                     <TextField
-                        label="Name"
+                        label="Tên sản phẩm"
                         variant="outlined"
                         size="small"
                         required
@@ -199,7 +199,7 @@ const UpdateProduct = () => {
                         onChange={(e) => setName(e.target.value)}
                     />
                     <TextField
-                        label="Description"
+                        label="Miêu tả"
                         multiline
                         rows={3}
                         required
@@ -210,7 +210,7 @@ const UpdateProduct = () => {
                     />
                     <div className="flex justify-between">
                         <TextField
-                            label="Price"
+                            label="Giá"
                             type="number"
                             variant="outlined"
                             size="small"
@@ -224,7 +224,7 @@ const UpdateProduct = () => {
                             onChange={(e) => setPrice(e.target.value)}
                         />
                         <TextField
-                            label="Cutted Price"
+                            label="Giá giảm"
                             type="number"
                             variant="outlined"
                             size="small"
@@ -240,7 +240,7 @@ const UpdateProduct = () => {
                     </div>
                     <div className="flex justify-between gap-4">
                         <TextField
-                            label="Category"
+                            label="Loại"
                             select
                             fullWidth
                             variant="outlined"
@@ -256,7 +256,7 @@ const UpdateProduct = () => {
                             ))}
                         </TextField>
                         <TextField
-                            label="Stock"
+                            label="Số lượng"
                             type="number"
                             variant="outlined"
                             size="small"
@@ -270,7 +270,7 @@ const UpdateProduct = () => {
                             onChange={(e) => setStock(e.target.value)}
                         />
                         <TextField
-                            label="Warranty"
+                            label="Bảo hành"
                             type="number"
                             variant="outlined"
                             size="small"
@@ -287,8 +287,8 @@ const UpdateProduct = () => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex justify-between items-center border rounded">
-                            <input value={highlightInput} onChange={(e) => setHighlightInput(e.target.value)} type="text" placeholder="Highlight" className="px-2 flex-1 outline-none border-none" />
-                            <span onClick={() => addHighlight()} className="py-2 px-6 bg-primary-blue text-white rounded-r hover:shadow-lg cursor-pointer">Add</span>
+                            <input value={highlightInput} onChange={(e) => setHighlightInput(e.target.value)} type="text" placeholder="Điểm nổi bật" className="px-2 flex-1 outline-none border-none" />
+                            <span onClick={() => addHighlight()} className="py-2 px-6 bg-primary-blue text-white rounded-r hover:shadow-lg cursor-pointer">Thêm</span>
                         </div>
 
                         <div className="flex flex-col gap-1.5">
@@ -303,10 +303,10 @@ const UpdateProduct = () => {
                         </div>
                     </div>
 
-                    <h2 className="font-medium">Brand Details</h2>
+                    <h2 className="font-medium">Thương hiệu</h2>
                     <div className="flex justify-between gap-4 items-start">
                         <TextField
-                            label="Brand"
+                            label="Thương hiệu"
                             type="text"
                             variant="outlined"
                             size="small"
@@ -327,19 +327,19 @@ const UpdateProduct = () => {
                                 onChange={handleLogoChange}
                                 className="hidden"
                             />
-                            Choose Logo
+                            Chọn Logo
                         </label>
                     </div>
 
                 </div>
 
                 <div className="flex flex-col gap-2 m-2 sm:w-1/2">
-                    <h2 className="font-medium">Specifications</h2>
+                    <h2 className="font-medium">Thông số kỹ thuật</h2>
 
                     <div className="flex justify-evenly gap-2 items-center">
-                        <TextField value={specsInput.title} onChange={handleSpecsChange} name="title" label="Name" placeholder="Model No" variant="outlined" size="small" />
-                        <TextField value={specsInput.description} onChange={handleSpecsChange} name="description" label="Description" placeholder="WJDK42DF5" variant="outlined" size="small" />
-                        <span onClick={() => addSpecs()} className="py-2 px-6 bg-primary-blue text-white rounded hover:shadow-lg cursor-pointer">Add</span>
+                        <TextField value={specsInput.title} onChange={handleSpecsChange} name="title" label="Mã kỹ thuật" placeholder="Model No" variant="outlined" size="small" />
+                        <TextField value={specsInput.description} onChange={handleSpecsChange} name="Miêu tả" label="Description" placeholder="WJDK42DF5" variant="outlined" size="small" />
+                        <span onClick={() => addSpecs()} className="py-2 px-6 bg-primary-blue text-white rounded hover:shadow-lg cursor-pointer">Thêm</span>
                     </div>
 
                     <div className="flex flex-col gap-1.5">
@@ -354,7 +354,7 @@ const UpdateProduct = () => {
                         ))}
                     </div>
 
-                    <h2 className="font-medium">Product Images</h2>
+                    <h2 className="font-medium">Thêm hình ảnh</h2>
                     <div className="flex gap-2 overflow-x-auto h-32 border rounded">
                         {oldImages && oldImages.map((image, i) => (
                             <img draggable="false" src={image.url} alt="Product" key={i} className="w-full h-full object-contain" />
@@ -372,17 +372,17 @@ const UpdateProduct = () => {
                             onChange={handleProductImageChange}
                             className="hidden"
                         />
-                        Choose Files
+                        Chọn ảnh tải lên
                     </label>
 
                     <div className="flex justify-end">
-                        <input form="mainform" type="submit" className="bg-primary-orange uppercase w-1/3 p-3 text-white font-medium rounded shadow hover:shadow-lg cursor-pointer" value="Update" />
+                        <input form="mainform" type="submit" className="bg-[#64afe9] uppercase w-1/3 p-3 text-white font-medium rounded shadow hover:shadow-lg cursor-pointer" value="Cập nhật" />
                     </div>
 
                 </div>
 
             </form>
-        </>
+        </AdminContainer>
     );
 };
 

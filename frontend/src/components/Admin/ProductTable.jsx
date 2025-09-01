@@ -28,7 +28,7 @@ const ProductTable = () => {
             dispatch(clearErrors());
         }
         if (isDeleted) {
-            enqueueSnackbar("Product Deleted Successfully", { variant: "success" });
+            enqueueSnackbar("Sản phẩm đã được xóa", { variant: "success" });
             dispatch({ type: DELETE_PRODUCT_RESET });
         }
         dispatch(getAdminProducts());
@@ -99,7 +99,7 @@ const ProductTable = () => {
             flex: 0.2,
             renderCell: (params) => {
                 return (
-                    <span>₹{params.row.price.toLocaleString()}</span>
+                    <span>{params.row.price.toLocaleString()}đ</span>
                 );
             },
         },
@@ -113,7 +113,7 @@ const ProductTable = () => {
             flex: 0.2,
             renderCell: (params) => {
                 return (
-                    <span>₹{params.row.cprice.toLocaleString()}</span>
+                    <span>{params.row.cprice.toLocaleString()}đ</span>
                 );
             },
         },
@@ -166,8 +166,8 @@ const ProductTable = () => {
             {loading && <BackdropLoader />}
 
             <div className="flex justify-between items-center">
-                <h1 className="text-lg font-medium uppercase">products</h1>
-                <Link to="/admin/new_product" className="py-2 px-4 rounded shadow font-medium text-white bg-primary-blue hover:shadow-lg">New Product</Link>
+                <h1 className="text-lg font-medium uppercase">Sản phẩm</h1>
+                <Link to="/admin/new_product" className="py-2 px-4 rounded shadow font-medium text-white bg-[#64afe9] hover:shadow-lg">Thêm sản phẩm</Link>
             </div>
             <div className="bg-white rounded-xl shadow-lg w-full" style={{ height: 470 }}>
 

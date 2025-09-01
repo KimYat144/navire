@@ -122,13 +122,13 @@ const MyOrders = () => {
 
                             {/* <!-- filters header --> */}
                             <div className="flex items-center justify-between gap-5 px-4 py-2 border-b">
-                                <p className="text-lg font-medium">Filters</p>
-                                <span onClick={clearFilters} className="text-blue-600 font-medium text-sm uppercase cursor-pointer hover:text-blue-700">clear all</span>
+                                <p className="text-lg font-medium">Bộ lọc</p>
+                                <span onClick={clearFilters} className="text-OR-600 font-medium text-sm uppercase cursor-pointer hover:text-blue-700">Xóa tất cả</span>
                             </div>
 
                             {/* <!-- order status checkboxes --> */}
                             <div className="flex flex-col py-3 text-sm">
-                                <span className="font-medium px-4">ORDER STATUS</span>
+                                <span className="font-medium px-4">Tình trạng đặt hàng</span>
 
                                 {/* <!-- checkboxes --> */}
                                 <div className="flex flex-col gap-3 px-4 mt-1 pb-3 border-b">
@@ -152,7 +152,7 @@ const MyOrders = () => {
 
                             {/* <!-- order time checkboxes --> */}
                             <div className="flex flex-col pb-2 text-sm">
-                                <span className="font-medium px-4">ORDER TIME</span>
+                                <span className="font-medium px-4">Thời gian đặt hàng</span>
 
                                 {/* <!-- checkboxes --> */}
                                 <div className="flex flex-col gap-3 mt-1 px-4 pb-3">
@@ -164,7 +164,7 @@ const MyOrders = () => {
                                             value={orderTime}
                                         >
                                             {ordertime.map((el, i) => (
-                                                <FormControlLabel value={el} control={<Radio size="small" />} key={i} label={<span className="text-sm">{i === 0 ? "This Month" : el}</span>} />
+                                                <FormControlLabel value={el} control={<Radio size="small" />} key={i} label={<span className="text-sm">{i === 0 ? "Tháng này" : el}</span>} />
                                             ))}
                                         </RadioGroup>
                                     </FormControl>
@@ -189,9 +189,9 @@ const MyOrders = () => {
                                 {/* <!-- searchbar --> */}
                                 <form onSubmit={searchOrders} className="flex items-center justify-between mx-1 sm:mx-0 sm:w-10/12 bg-white border rounded hover:shadow">
                                     <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" name="search" placeholder="Search your orders here" className="p-2 text-sm outline-none flex-1 rounded-l" />
-                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-primary-blue hover:bg-blue-600 rounded-r flex items-center gap-1">
+                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-primary-orange hover:bg-blue-600 rounded-r flex items-center gap-1">
                                         <SearchIcon sx={{ fontSize: "22px" }} />
-                                        Search Orders
+                                        Tìm kiếm đặt hàng
                                     </button>
                                 </form>
                                 {/* <!-- searchbar --> */}
@@ -199,8 +199,8 @@ const MyOrders = () => {
                                 {orders && filteredOrders.length === 0 && (
                                     <div className="flex items-center flex-col gap-2 p-8 bg-white">
                                         <img draggable="false" src="https://rukminim1.flixcart.com/www/100/100/promos/23/08/2020/c5f14d2a-2431-4a36-b6cb-8b5b5e283d4f.png" alt="Empty Orders" />
-                                        <span className="text-lg font-medium">Sorry, no results found</span>
-                                        <p>Edit search or clear all filters</p>
+                                        <span className="text-lg font-medium">Không tìm thấy kết quả</span>
+                                        <p>Chỉnh sửa hoặc xóa tất cả bộ lọc</p>
                                     </div>
                                 )}
 

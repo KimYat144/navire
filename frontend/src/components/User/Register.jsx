@@ -36,15 +36,15 @@ const Register = () => {
     const handleRegister = (e) => {
         e.preventDefault();
         if (password.length < 8) {
-            enqueueSnackbar("Password length must be atleast 8 characters", { variant: "warning" });
+            enqueueSnackbar("Mật khẩu phải ít nhất 8 ký tự", { variant: "warning" });
             return;
         }
         if (password !== cpassword) {
-            enqueueSnackbar("Password Doesn't Match", { variant: "error" });
+            enqueueSnackbar("Mật khẩu phải trùng nhau", { variant: "error" });
             return;
         }
         if (!avatar) {
-            enqueueSnackbar("Select Avatar", { variant: "error" });
+            enqueueSnackbar("Vui lòng chọn avatar", { variant: "error" });
             return;
         }
 
@@ -88,7 +88,7 @@ const Register = () => {
 
     return (
         <>
-            <MetaData title="Register | Flipkart" />
+            <MetaData title="Đăng ký | Flipkart" />
 
             {loading && <BackdropLoader />}
             <main className="w-full mt-12 sm:pt-20 sm:mt-0">
@@ -97,8 +97,8 @@ const Register = () => {
                 <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
 
                     <FormSidebar
-                        title="Looks like you're new here!"
-                        tag="Sign up with your mobile number to get started"
+                        title="Có vẻ như bạn là người mới ở đây!"
+                        tag="Đăng ký bằng số điện thoại di động của bạn để bắt đầu"
                     />
 
                     {/* <!-- signup column --> */}
@@ -138,15 +138,15 @@ const Register = () => {
 
                                 {/* <!-- gender input --> */}
                                 <div className="flex gap-4 items-center">
-                                    <h2 className="text-md">Your Gender :</h2>
+                                    <h2 className="text-md">Giới tính: </h2>
                                     <div className="flex items-center gap-6" id="radioInput">
                                         <RadioGroup
                                             row
                                             aria-labelledby="radio-buttons-group-label"
                                             name="radio-buttons-group"
                                         >
-                                            <FormControlLabel name="gender" value="male" onChange={handleDataChange} control={<Radio required />} label="Male" />
-                                            <FormControlLabel name="gender" value="female" onChange={handleDataChange} control={<Radio required />} label="Female" />
+                                            <FormControlLabel name="gender" value="male" onChange={handleDataChange} control={<Radio required />} label="Nam" />
+                                            <FormControlLabel name="gender" value="female" onChange={handleDataChange} control={<Radio required />} label="Nữ" />
                                         </RadioGroup>
                                     </div>
                                 </div>
@@ -189,11 +189,11 @@ const Register = () => {
                                             onChange={handleDataChange}
                                             className="hidden"
                                         />
-                                        Choose File
+                                        Chọn ảnh đại diện
                                     </label>
                                 </div>
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Signup</button>
-                                <Link to="/login" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Existing User? Log in</Link>
+                                <button type="submit" className="text-white py-3 w-full bg-[#64afe9] shadow hover:shadow-lg rounded-sm font-medium">Đăng Ký</button>
+                                <Link to="/login" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Đăng Nhập</Link>
                             </div>
 
                         </form>
@@ -208,5 +208,4 @@ const Register = () => {
         </>
     );
 };
-
 export default Register;

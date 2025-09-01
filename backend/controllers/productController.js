@@ -18,8 +18,7 @@ exports.getAllProducts = asyncErrorHandler(async (req, res, next) => {
     let products = await searchFeature.query;
     let filteredProductsCount = products.length;
 
-    searchFeature.pagination(resultPerPage);
-
+    searchFeature.pagination(resultPerPage);                         
     products = await searchFeature.query.clone();
 
     res.status(200).json({

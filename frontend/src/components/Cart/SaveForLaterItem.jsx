@@ -36,16 +36,16 @@ const SaveForLaterItem = ({ product, name, seller, price, cuttedPrice, image, st
                     <div className="flex justify-between items-start pr-5">
                         <div className="flex flex-col gap-0.5 w-11/12 sm:w-full">
                             <p>{name.length > 50 ? `${name.substring(0, 50)}...` : name}</p>
-                            <span className="text-sm text-gray-500">Seller: {seller}</span>
+                            <span className="text-sm text-gray-500">Người bán: {seller}</span>
                         </div>
                     </div>
                     {/* <!-- product title --> */}
 
                     {/* <!-- price desc --> */}
                     <div className="flex items-baseline gap-2 text-xl font-medium">
-                        <span>₹{(price * quantity).toLocaleString()}</span>
-                        <span className="text-sm text-gray-500 line-through font-normal">₹{(cuttedPrice * quantity).toLocaleString()}</span>
-                        <span className="text-sm text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
+                        <span>{(price * quantity).toLocaleString()}đ</span>
+                        <span className="text-sm text-gray-500 line-through font-normal">{(cuttedPrice * quantity).toLocaleString()}đ</span>
+                        <span className="text-sm text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;</span>
                     </div>
                     {/* <!-- price desc --> */}
 

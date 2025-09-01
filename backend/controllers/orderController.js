@@ -60,7 +60,16 @@ exports.getSingleOrderDetails = asyncErrorHandler(async (req, res, next) => {
         success: true,
         order,
     });
-});
+})
+   
+exports.getSingleOrderDetails = asyncErrorHandler(async (req, res) => {
+
+    const order = await Order.findById(req.params.id).populate("user", "name");
+
+    if (!order) {
+        return next(new  ErrorHandler("order not found", 404))
+    }
+})
 
 
 // Get Logged In User Orders
@@ -77,6 +86,7 @@ exports.myOrders = asyncErrorHandler(async (req, res, next) => {
         orders,
     });
 });
+
 
 
 // Get All Orders ---ADMIN

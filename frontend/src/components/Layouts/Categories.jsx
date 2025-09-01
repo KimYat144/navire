@@ -1,51 +1,42 @@
-import mobiles from '../../assets/images/Categories/phone.png';
-import fashion from '../../assets/images/Categories/fashion.png';
-import electronics from '../../assets/images/Categories/electronics.png';
-import home from '../../assets/images/Categories/home.png';
-import travel from '../../assets/images/Categories/travel.png';
-import appliances from '../../assets/images/Categories/appliances.png';
-import furniture from '../../assets/images/Categories/furniture.png';
-import beauty from '../../assets/images/Categories/beauty.png';
-import grocery from '../../assets/images/Categories/grocery.png';
+import trangsucnam from '../../assets/images/Categories/trangsucnam.png'; 
+import trangsucnu from '../../assets/images/Categories/trangsucnu.png'; 
+import dongho from '../../assets/images/Categories/dongho.png';
+import trangsuccuoi from '../../assets/images/Categories/trangsuccuoi.png';
+import treem from '../../assets/images/Categories/treem.png';
+import phongthuy from '../../assets/images/Categories/phongthuy.png';
+import botrangsuc from '../../assets/images/Categories/botrangsuc.png';
 import { Link } from 'react-router-dom';
 
 const catNav = [
     {
-        name: "Mobiles",
-        icon: mobiles,
+        name: "Trang Sức Nam",
+        icon: trangsucnam,
     },
     {
-        name: "Fashion",
-        icon: fashion,
+        name: "Trang Sức Nữ",
+        icon: trangsucnu,
     },
     {
-        name: "Electronics",
-        icon: electronics,
+        name: "Đồng Hồ",
+        icon: dongho,
     },
     {
-        name: "Home",
-        icon: home,
+        name: "Trang Sức Cưới",
+        icon: trangsuccuoi,
     },
     {
-        name: "Travel",
-        icon: travel,
+        name: "Trang Sức Trẻ Em",
+        icon: treem,
     },
     {
-        name: "Appliances",
-        icon: appliances,
+        name: "Trang Sức Phong Thủy",
+        icon: phongthuy,
     },
     {
-        name: "Furniture",
-        icon: furniture,
+        name: "Bộ Trang Sức",
+        icon: botrangsuc,
     },
-    {
-        name: "Beauty,Toys & more",
-        icon: beauty,
-    },
-    {
-        name: "Grocery",
-        icon: grocery,
-    },
+   
 ]
 
 const Categories = () => {
