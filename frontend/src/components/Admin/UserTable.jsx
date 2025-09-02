@@ -47,7 +47,9 @@ const UserTable = () => {
       flex: 1,
       renderCell: (params) => {
         return (
+          
           <div className="flex items-center gap-2">
+          {/* {console.log(params)} */}
             <div className="w-10 h-10 rounded-full">
               <img
                 draggable="false"
@@ -80,7 +82,8 @@ const UserTable = () => {
       flex: 0.2,
       renderCell: (params) => {
         return (
-          <AdminContainer>
+          <>
+          {console.log(params.row.role)}
             {params.row.role === "admin" ? (
               <span className="text-sm bg-green-100 p-1 px-2 font-medium rounded-full text-green-800 capitalize">
                 {params.row.role}
@@ -90,7 +93,7 @@ const UserTable = () => {
                 {params.row.role}
               </span>
             )}
-          </AdminContainer>
+          </>
         );
       },
     },
