@@ -31,7 +31,7 @@ const Banner = () => {
     autoplaySpeed: 2000,
     dots: false,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: <PreviousBtn />,

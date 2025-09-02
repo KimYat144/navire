@@ -163,7 +163,8 @@ const UpdateProduct = () => {
             setHighlights(product.highlights);
             setSpecs(product.specifications);
             setOldImages(product.images);
-            setLogoPreview(product.brand.logo.url);
+            setLogoPreview(product.brand?.logo?.url || "");
+
         }
         if (error) {
             enqueueSnackbar(error, { variant: "error" });
